@@ -11,7 +11,8 @@ function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 text-lg">
           <Link to="/" className="poppins-regular hover:underline">Home</Link>
-          <Link to="/products" className="poppins-regular hover:underline">Products</Link>
+          <Link to="/food" className="poppins-regular hover:underline">Food</Link>
+          <Link to="/drink" className="poppins-regular hover:underline">Drink</Link>
           <Link to="/services" className="poppins-regular hover:underline">Services</Link>
           <Link to="/about" className="poppins-regular hover:underline">About</Link>
           <Link to="/contact" className="poppins-regular hover:underline">Contact</Link>
@@ -32,7 +33,8 @@ function Navbar() {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
             <Link to="/" className="poppins-regular hover:underline" onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link to="/products" className="poppins-regular hover:underline" onClick={() => setMenuOpen(false)}>Products</Link>
+            <Link to="/food" className="poppins-regular hover:underline" onClick={() => setMenuOpen(false)}>Food</Link>
+            <Link to="/drink" className="poppins-regular hover:underline" onClick={() => setMenuOpen(false)}>Drink</Link>
             <Link to="/services" className="poppins-regular hover:underline" onClick={() => setMenuOpen(false)}>Services</Link>
             <Link to="/about" className="poppins-regular hover:underline" onClick={() => setMenuOpen(false)}>About</Link>
             <Link to="/contact" className="poppins-regular hover:underline" onClick={() => setMenuOpen(false)}>Contact</Link>
