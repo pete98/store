@@ -58,7 +58,7 @@ const features = [
 
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+
   const lotteryImages = [
     { src: lotteryImg, alt: "Lottery Area" },
     { src: sittingImg, alt: "Sitting Area" },
@@ -127,6 +127,7 @@ function Home() {
           <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white">{heroTitle}</h1>
           <p className="text-white text-lg md:text-xl mb-1">{heroSubtitle}</p>
           <p className="text-white text-sm md:text-base mb-3">{storeAddress}</p>
+          
           <a 
             href="https://maps.app.goo.gl/ajsP7umBxQCVA71fA" 
             target="_blank" 

@@ -8,10 +8,12 @@ function Navbar() {
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo/Title */}
         <div className="flex flex-col leading-tight">
-          <Link to="/" className="text-xl md:text-2xl font-bold poppins-black text-red-600">
-            Krauszer's Food Store <span className="font-normal text-black">Rahway</span>
-          </Link>
-          <span className="text-xs md:text-sm text-gray-700 -mt-1">960 St Georges Ave, Rahway, NJ</span>
+          <div className="bg-red-600 rounded-xl px-3 py-1 w-fit shadow-lg">
+            <Link to="/" className="text-xl md:text-2xl font-bold poppins-black text-white">
+              Krauszer's Food Store <span className="font-normal text-white">Rahway</span>
+            </Link>
+            <span className="text-xs md:text-sm text-white block -mt-1">960 St Georges Ave, Rahway, NJ</span>
+          </div>
         </div>
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 text-lg">
