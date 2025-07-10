@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import heroImg from '../assets/hero.jpg'; // Placeholder, add your own image
 import coffeeImg from '../assets/Coffee.jpeg';
 import lotteryImg from '../assets/lottery.jpeg';
 
-import westernUnionLogo from '../assets/western-union.png';
-import moneyOrderIcon from '../assets/money-order-icon-14.jpg';
+
 import busIcon from '../assets/bus.png';
 import lotteryIcon from '../assets/new_jersey_lottery.png';
 import printerIcon from '../assets/printer.png';
@@ -22,7 +20,6 @@ import groceryImg1 from '../assets/grocery/IMG_1111.jpeg';
 import groceryImg2 from '../assets/grocery/IMG_5547.jpeg';
 import groceryImg3 from '../assets/grocery/IMG_5572.jpeg';
 import groceryImg4 from '../assets/grocery/IMG_5604.jpeg';
-import groceryImg5 from '../assets/grocery/IMG_5604 2.jpeg';
 import groceryImg6 from '../assets/grocery/IMG_5610.jpeg';
 import groceryImg7 from '../assets/grocery/IMG_5611.jpeg';
 
@@ -98,7 +95,6 @@ function Home() {
     { src: groceryImg2, alt: 'Grocery 2' },
     { src: groceryImg3, alt: 'Grocery 3' },
     { src: groceryImg4, alt: 'Grocery 4' },
-    { src: groceryImg5, alt: 'Grocery 5' },
     { src: groceryImg6, alt: 'Grocery 6' },
     { src: groceryImg7, alt: 'Grocery 7' },
   ];
