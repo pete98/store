@@ -10,7 +10,7 @@ import CasinoBusServices from './pages/CasinoBusServices';
 import NewJerseyLottery from './pages/NewJerseyLottery';
 import Navbar from './components/Navbar.jsx'
 import Bills from './pages/bills.jsx';
-import GiftCard from './pages/giftcard.jsx';
+import GiftCard from './pages/giftCard.jsx';
 import './index.css';
 
 function App() {
