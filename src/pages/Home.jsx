@@ -108,9 +108,9 @@ function Home() {
           </a>
         </div>
       </div>
-      {/* Our Services Heading - Mobile Only */}
-      <div className="md:hidden max-w-6xl mx-auto px-4 mt-8 mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 text-center">Our Services</h2>
+      {/* Our Services Heading */}
+      <div className="max-w-6xl mx-auto px-4 mt-4 mb-2">
+        <h2 className="text-2xl font-bold text-white text-center bg-black rounded-xl py-4">Our Services</h2>
       </div>
       {/* Features */}
       <div className="grid grid-cols-1 md:grid-cols-6 gap-4 py-10 px-4 md:px-0 max-w-6xl mx-auto">
@@ -188,10 +188,10 @@ function Home() {
         {/* Text Right */}
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center rounded-3xl md:rounded-r-3xl md:rounded-l-none">
           <h2 className="text-3xl md:text-5xl font-extrabold">
-            <span className="text-black">Fresh</span> <span className="text-[#4B2E19]">Coffee, Cappucino, Hot Chocolate,</span>
+            <span className="text-black">Fresh</span> <span className="text-[#4B2E19]">Coffee</span>
           </h2>
           <div className="text-3xl md:text-5xl font-extrabold mb-4 text-gray-900">Every Day.</div>
-          <p className="text-lg md:text-2xl text-gray-700 mb-2">Enjoy barista-quality Bunn Law Coffee from our state-of-the-art machine. Start your morning right or grab an afternoon pick-me-up in a modern, welcoming space.</p>
+          <p className="text-lg md:text-2xl text-gray-700 mb-2">Enjoy barista-quality Bunn Law Coffee, Cappuchino, Hot Chocolate and french vanilla from our state-of-the-art machine. Start your morning right or grab an afternoon pick-me-up in a modern, welcoming space.</p>
         </div>
       </div>
       {/* New Jersey Lottery Section */}

@@ -4,14 +4,14 @@ import { useState } from 'react';
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav className="shadow px-4 py-3">
+    <nav className="px-4 py-3">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo/Title */}
         <div className="flex flex-col leading-tight">
-          <Link to="/" className="text-2xl font-bold poppins-black text-red-600">
+          <Link to="/" className="text-xl md:text-2xl font-bold poppins-black text-red-600">
             Krauszer's Food Store <span className="font-normal text-black">Rahway</span>
           </Link>
-          <span className="text-sm text-gray-700 -mt-1">960 St Georges Ave, Rahway, NJ</span>
+          <span className="text-xs md:text-sm text-gray-700 -mt-1">960 St Georges Ave, Rahway, NJ</span>
         </div>
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 text-lg">
