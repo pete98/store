@@ -18,7 +18,7 @@ import frontImg from '../assets/front.jpeg';
 import sittingImg from '../assets/sitting.jpeg';
 import slipsImg from '../assets/slips.jpeg';
 import ticketsImg from '../assets/tickets.jpeg';
-import groceryImg1 from '../assets/grocery/grocery.jpeg';
+import groceryImg1 from '../assets/grocery/IMG_1111.jpeg';
 import groceryImg2 from '../assets/grocery/IMG_5547.jpeg';
 import groceryImg3 from '../assets/grocery/IMG_5572.jpeg';
 import groceryImg4 from '../assets/grocery/IMG_5604.jpeg';
@@ -224,6 +224,7 @@ function Home() {
             <span className="text-black">Fresh</span> <span className="text-[#4B2E19]">Coffee</span>
           </h2>
           <div className="text-3xl md:text-5xl font-extrabold mb-4 text-gray-900">Every Day.</div>
+          <p className="text-lg md:text-1xl text-red-600 mb-1">(Deal: Get Any Size Coffee, Butter Roll & Banana for $5.)</p>
           <p className="text-lg md:text-2xl text-gray-700 mb-2">Enjoy barista-quality Bunn Law Coffee, Cappuchino, Hot Chocolate and french vanilla from our state-of-the-art machine. Start your morning right or grab an afternoon pick-me-up in a modern, welcoming space.</p>
         </div>
       </div>
