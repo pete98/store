@@ -1,5 +1,3 @@
-import { useTranslation } from 'react-i18next';
-import { FaMoneyCheckAlt, FaMoneyBillWave, FaMobileAlt, FaUniversity } from 'react-icons/fa';
 import westernUnionLogo from '../assets/western-union.png';
 import riaLogo from '../assets/ria-money-transfer-seeklogo.png';
 
