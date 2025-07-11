@@ -117,13 +117,13 @@ function Home() {
   return (
     <div className=" pt-10 min-h-screen">
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row items-center max-w-6xl mx-5 md:mx-auto mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+      <div className="flex flex-col md:flex-row items-stretch max-w-6xl mx-5 md:mx-auto mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
         {/* Image Left */}
         <div className="w-full md:w-1/2 h-64 md:h-96">
           <img src={frontImg} alt="Store Front" className="w-full h-full object-cover" />
         </div>
         {/* Text Right */}
-        <div className="w-full md:w-1/2 p-8 flex flex-col justify-center bg-black md:rounded-r-xl">
+        <div className="w-full md:w-1/2 p-8 flex flex-col justify-center bg-black">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white">{heroTitle}</h1>
           <p className="text-white text-lg md:text-xl mb-1">{heroSubtitle}</p>
           <p className="text-white text-sm md:text-base mb-3">{storeAddress}</p>
