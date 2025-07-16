@@ -27,10 +27,10 @@ import snappleImg from '../assets/deals/snapple.webp';
 import arizonaImg from '../assets/deals/arizona.webp';
 
 // English-only content as plain variables/arrays
-const heroTitle = 'Your Dedicated Friendly Neighborhood Store for over 30 Years.';
+const heroTitle = 'Your Dedicated Neighborhood Store for over 30 Years.';
 const heroSubtitle = 'Open every day from 6 AM to 11 PM';
 const findUs = 'Find Us on Google Maps';
-const storeAddress = '960 St Georges Ave, Rahway, NJ 07065';
+const storeAddress = '960 St Georges Ave, Rahway, NJ';
 const features = [
   {
     title: 'Western Union & Ria',
@@ -129,7 +129,8 @@ function Home() {
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center bg-black">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white">{heroTitle}</h1>
           <p className="text-white text-lg md:text-xl mb-1">{heroSubtitle}</p>
-          <p className="text-white text-sm md:text-base mb-3">{storeAddress}</p>
+          <p className="text-white text-md md:text-base mb-1">{storeAddress}</p>
+          <p className="text-white text-md md:text-base mb-3">Call us at <a href="tel:+17324996748" className="underline hover:text-yellow-300 transition-colors">+1 732-499-6748</a></p>
           
           <a 
             href="https://maps.app.goo.gl/ajsP7umBxQCVA71fA" 
