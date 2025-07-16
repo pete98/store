@@ -22,6 +22,9 @@ import groceryImg3 from '../assets/grocery/IMG_5572.jpeg';
 import groceryImg4 from '../assets/grocery/IMG_5604.jpeg';
 import groceryImg6 from '../assets/grocery/IMG_5610.jpeg';
 import groceryImg7 from '../assets/grocery/IMG_5611.jpeg';
+import platterImg from '../assets/deals/platter.png';
+import snappleImg from '../assets/deals/snapple.webp';
+import arizonaImg from '../assets/deals/arizona.webp';
 
 // English-only content as plain variables/arrays
 const heroTitle = 'Your Dedicated Friendly Neighborhood Store for over 30 Years.';
@@ -208,6 +211,30 @@ function Home() {
           )
         )}
       </div>
+      {/* Deals Section */}
+      <div className="max-w-6xl mx-auto px-4 my-8">
+        <div className="bg-blue-700 rounded-3xl shadow-2xl p-6 flex flex-col gap-4 items-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-yellow-300 mb-2">This Week's In-Store Deals!</h2>
+          <div className="h-1 w-32 bg-yellow-300 rounded-full mb-4"></div>
+          <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-stretch">
+            {/* Deal 1 */}
+            <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4 w-full md:w-1/3">
+              <img src={platterImg} alt="Coffee Deal" className="w-20 h-20 rounded-lg object-cover" />
+              <div className="text-base md:text-lg font-medium text-gray-800"><span className="font-bold">Any Size Coffee</span>, Butter Roll &amp; Banana for <span className="text-red-600 font-bold">$5</span></div>
+            </div>
+            {/* Deal 2 */}
+            <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4 w-full md:w-1/3">
+              <img src={snappleImg} alt="Snapple Deal" className="w-20 h-20 rounded-lg object-contain" />
+              <div className="text-base md:text-lg font-medium text-gray-800">Buy 3 ~ <span className="font-bold">16oz Snapple</span> for <span className="text-red-600 font-bold">$5</span></div>
+            </div>
+            {/* Deal 3 */}
+            <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4 w-full md:w-1/3">
+              <img src={arizonaImg} alt="Arizona Deal" className="w-20 h-20 rounded-lg object-contain" />
+              <div className="text-base md:text-lg font-medium text-gray-800">Any 5 <span className="font-bold">Arizona Cans</span> for <span className="text-red-600 font-bold">$5</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* New Modern Sections */}
       {/* Coffee Section */}
       <div className="flex flex-col md:flex-row items-center max-w-6xl mx-5 md:mx-auto my-12 bg-white rounded-3xl shadow-2xl overflow-hidden">
@@ -221,7 +248,6 @@ function Home() {
             <span className="text-black">Fresh</span> <span className="text-[#4B2E19]">Coffee</span>
           </h2>
           <div className="text-3xl md:text-5xl font-extrabold mb-4 text-gray-900">Every Day.</div>
-          <p className="text-lg md:text-1xl text-red-600 mb-1">(Deal: Get Any Size Coffee, Butter Roll & Banana for $5.)</p>
           <p className="text-lg md:text-2xl text-gray-700 mb-2">Enjoy barista-quality Bunn Law Coffee, Cappuchino, Hot Chocolate and french vanilla from our state-of-the-art machine. Start your morning right or grab an afternoon pick-me-up in a modern, welcoming space.</p>
         </div>
       </div>
