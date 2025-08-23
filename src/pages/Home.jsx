@@ -3,6 +3,11 @@ import { useState, useEffect } from 'react';
 import coffeeImg from '../assets/Coffee.jpeg';
 import lotteryImg from '../assets/lottery.jpeg';
 
+// Import ticket images
+import ticketImg1 from '../assets/tickets/2FC6A284-A5EE-46BF-8753-077F6AFD56DE_1_105_c.jpeg';
+import ticketImg2 from '../assets/tickets/5388628D-1B84-4E8A-8A7F-6C719AB60E5A_1_105_c.jpeg';
+import ticketImg3 from '../assets/tickets/D659E4D3-C04A-41D7-B4E4-72612C684E08_1_105_c.jpeg';
+import ticketImg4 from '../assets/tickets/AF2C5BD6-7C17-4253-B7AA-C3645730D264_1_105_c.jpeg';
 
 import busIcon from '../assets/bus.png';
 import lotteryIcon from '../assets/new_jersey_lottery.png';
@@ -25,6 +30,9 @@ import groceryImg7 from '../assets/grocery/IMG_5611.jpeg';
 import platterImg from '../assets/deals/platter.png';
 import snappleImg from '../assets/deals/snapple.webp';
 import arizonaImg from '../assets/deals/arizona.webp';
+import vitaminImg from '../assets/deals/vitamin.webp';
+import gatoradeCoolblueImg from '../assets/deals/GatoradeCoolblue.webp';
+import fruit28Img from '../assets/deals/fruit28.webp';
 
 // English-only content as plain variables/arrays
 const heroTitle = 'Your Dedicated Neighborhood Store for over 30 Years.';
@@ -61,6 +69,7 @@ const features = [
 
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isDealsExpanded, setIsDealsExpanded] = useState(false);
 
   const lotteryImages = [
     { src: lotteryImg, alt: "Lottery Area" },
@@ -116,6 +125,29 @@ function Home() {
     const interval = setInterval(nextGroceryImage, 2000);
     return () => clearInterval(interval);
   }, [groceryImages.length]);
+
+  // Ticket carousel state and images
+  const ticketImages = [
+    { src: ticketImg1, alt: 'Lottery Ticket 1' },
+    { src: ticketImg2, alt: 'Lottery Ticket 2' },
+    { src: ticketImg3, alt: 'Lottery Ticket 3' },
+    { src: ticketImg4, alt: 'Lottery Ticket 4' },
+  ];
+  const [currentTicketIndex, setCurrentTicketIndex] = useState(0);
+  const nextTicketImage = () => {
+    setCurrentTicketIndex((prev) =>
+      prev === ticketImages.length - 1 ? 0 : prev + 1
+    );
+  };
+  const prevTicketImage = () => {
+    setCurrentTicketIndex((prev) =>
+      prev === 0 ? ticketImages.length - 1 : prev - 1
+    );
+  };
+  useEffect(() => {
+    const interval = setInterval(nextTicketImage, 2500);
+    return () => clearInterval(interval);
+  }, [ticketImages.length]);
 
   return (
     <div className=" pt-10 min-h-screen">
@@ -215,27 +247,109 @@ function Home() {
       {/* Deals Section */}
       <div className="max-w-6xl mx-auto px-4 my-8">
         <div className="bg-blue-700 rounded-3xl shadow-2xl p-6 flex flex-col gap-4 items-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-yellow-300 mb-2">This Week's In-Store Deals!</h2>
+          <div className="flex items-center gap-3 cursor-pointer" onClick={() => setIsDealsExpanded(!isDealsExpanded)}>
+            <h2 className="text-2xl md:text-3xl font-bold text-yellow-300 mb-2">This Week's In-Store Deals!</h2>
+            <svg 
+              className={`w-6 h-6 text-yellow-300 transition-transform duration-300 ${isDealsExpanded ? 'rotate-180' : ''}`} 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
           <div className="h-1 w-32 bg-yellow-300 rounded-full mb-4"></div>
-          <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-stretch">
-            {/* Deal 1 */}
-            <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4 w-full md:w-1/3">
-              <img src={platterImg} alt="Coffee Deal" className="w-20 h-20 rounded-lg object-cover" />
-              <div className="text-base md:text-lg font-medium text-gray-800"><span className="font-bold">Any Size Coffee</span>, Butter Roll &amp; Banana for <span className="text-red-600 font-bold">$5</span></div>
+          
+          {isDealsExpanded && (
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 justify-center items-stretch">
+              {/* Deal 1 */}
+              <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4">
+                <img src={platterImg} alt="Coffee Deal" className="w-20 h-20 rounded-lg object-cover" />
+                <div className="text-base md:text-lg font-medium text-gray-800"><span className="font-bold">Any Size Coffee</span>, Butter Roll &amp; Banana for <span className="text-red-600 font-bold">$5</span></div>
+              </div>
+              {/* Deal 2 */}
+              <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4">
+                <img src={snappleImg} alt="Snapple Deal" className="w-20 h-20 rounded-lg object-contain" />
+                <div className="text-base md:text-lg font-medium text-gray-800">Buy 3 ~ <span className="font-bold">16oz Snapple</span> for <span className="text-red-600 font-bold">$5</span></div>
+              </div>
+              {/* Deal 3 */}
+              <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4">
+                <img src={arizonaImg} alt="Arizona Deal" className="w-20 h-20 rounded-lg object-contain" />
+                <div className="text-base md:text-lg font-medium text-gray-800">Any 5 <span className="font-bold">Arizona Cans</span> for <span className="text-red-600 font-bold">$5</span></div>
+              </div>
+              {/* Deal 4 - New */}
+              <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4">
+                <img src={gatoradeCoolblueImg} alt="Gatorade Deal" className="w-20 h-20 rounded-lg object-cover" />
+                <div className="text-base md:text-lg font-medium text-gray-800"><span className="font-bold">20oz Gatorade</span> - 3 for <span className="text-red-600 font-bold">$6.99</span></div>
+              </div>
+              {/* Deal 5 - New */}
+              <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4">
+                <img src={vitaminImg} alt="Vitamin Water Deal" className="w-20 h-20 rounded-lg object-cover" />
+                <div className="text-base md:text-lg font-medium text-gray-800"><span className="font-bold">Vitamin Water</span> - 3 for <span className="text-red-600 font-bold">$6.99</span></div>
+              </div>
+              {/* Deal 6 - New */}
+              <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4">
+                <img src={fruit28Img} alt="Large Gatorade Deal" className="w-20 h-20 rounded-lg object-contain" />
+                <div className="text-base md:text-lg font-medium text-gray-800"><span className="font-bold">28oz Gatorade</span> - 2 for <span className="text-red-600 font-bold">$5.49</span></div>
+              </div>
             </div>
-            {/* Deal 2 */}
-            <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4 w-full md:w-1/3">
-              <img src={snappleImg} alt="Snapple Deal" className="w-20 h-20 rounded-lg object-contain" />
-              <div className="text-base md:text-lg font-medium text-gray-800">Buy 3 ~ <span className="font-bold">16oz Snapple</span> for <span className="text-red-600 font-bold">$5</span></div>
-            </div>
-            {/* Deal 3 */}
-            <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4 w-full md:w-1/3">
-              <img src={arizonaImg} alt="Arizona Deal" className="w-20 h-20 rounded-lg object-contain" />
-              <div className="text-base md:text-lg font-medium text-gray-800">Any 5 <span className="font-bold">Arizona Cans</span> for <span className="text-red-600 font-bold">$5</span></div>
+          )}
+        </div>
+      </div>
+
+      {/* Recent Lottery Winner Section */}
+      <div className="max-w-6xl mx-auto px-4 my-16">
+        <div className="flex flex-col md:flex-row items-center bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 rounded-3xl shadow-2xl overflow-hidden">
+          {/* Text Left */}
+          <div className="w-full md:w-1/2 p-8 flex flex-col justify-center rounded-3xl md:rounded-l-3xl md:rounded-r-none">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-3">
+              <span className="text-white">Instant Lottery Ticket</span> <span className="text-yellow-300">Winning Window!</span>
+            </h2>
+            <p className="text-lg md:text-2xl text-white mb-4">Check out our latest lottery ticket winner! Your next big win could be just a scratch away.</p>
+          </div>
+          {/* Ticket Carousel Right */}
+          <div className="w-full md:w-1/2 h-96 md:h-[32rem] rounded-3xl md:rounded-r-3xl md:rounded-l-none overflow-hidden relative">
+            <img
+              src={ticketImages[currentTicketIndex].src}
+              alt={ticketImages[currentTicketIndex].alt}
+              className="w-full h-full object-cover rounded-3xl md:rounded-r-3xl md:rounded-l-none transition-opacity duration-300"
+            />
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevTicketImage}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors touch-manipulation"
+              aria-label="Previous ticket image"
+            >
+              <svg className="w-6 h-6 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={nextTicketImage}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors touch-manipulation"
+              aria-label="Next ticket image"
+            >
+              <svg className="w-6 h-6 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            {/* Dots Indicator */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3 md:space-x-2">
+              {ticketImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTicketIndex(index)}
+                  className={`w-3 h-3 md:w-2 md:h-2 rounded-full transition-colors touch-manipulation ${
+                    index === currentTicketIndex ? 'bg-white' : 'bg-white/50'
+                  }`}
+                  aria-label={`Go to ticket image ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
       </div>
+
       {/* New Modern Sections */}
       {/* Coffee Section */}
       <div className="flex flex-col md:flex-row items-center max-w-6xl mx-5 md:mx-auto my-12 bg-white rounded-3xl shadow-2xl overflow-hidden">
