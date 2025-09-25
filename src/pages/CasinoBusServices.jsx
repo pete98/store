@@ -3,7 +3,7 @@ import React from 'react';
 const BUS_SERVICES = [
   {
     destination: 'Atlantic City (New Jersey)',
-    days: 'Mon, Tue, Wed, Thu, Fri, Sat, Sun',
+    days: 'Wed, Thu, Fri, Sat, Sun',
     departure: '9:40 AM',
     return: '8:00 PM',
     notes: 'Bus times may change during national holidays and seasonal shifts. Call below number to confirm',
