@@ -8,7 +8,7 @@ import ticketImg1 from '../assets/tickets/2FC6A284-A5EE-46BF-8753-077F6AFD56DE_1
 import ticketImg2 from '../assets/tickets/5388628D-1B84-4E8A-8A7F-6C719AB60E5A_1_105_c.jpeg';
 import ticketImg3 from '../assets/tickets/D659E4D3-C04A-41D7-B4E4-72612C684E08_1_105_c.jpeg';
 import ticketImg4 from '../assets/tickets/AF2C5BD6-7C17-4253-B7AA-C3645730D264_1_105_c.jpeg';
-
+import ticketImg5 from '../assets/tickets/bigwinner.jpeg';
 import busIcon from '../assets/bus.png';
 import lotteryIcon from '../assets/new_jersey_lottery.png';
 import printerIcon from '../assets/printer.png';
@@ -35,7 +35,7 @@ import gatoradeCoolblueImg from '../assets/deals/GatoradeCoolblue.webp';
 import fruit28Img from '../assets/deals/fruit28.webp';
 
 // English-only content as plain variables/arrays
-const heroTitle = 'Your Dedicated Neighborhood Store for over 30 Years.';
+const heroTitle = 'Your Dedicated Neighborhood Store, serving community for over 30 Years with reliability and honesty.';
 const heroSubtitle = 'Open every day from 6 AM to 11 PM';
 const findUs = 'Find Us on Google Maps';
 const storeAddress = '960 St Georges Ave, Rahway, NJ';
@@ -128,10 +128,12 @@ function Home() {
 
   // Ticket carousel state and images
   const ticketImages = [
+    { src: ticketImg5, alt: 'Lottery Ticket 5' },
     { src: ticketImg1, alt: 'Lottery Ticket 1' },
     { src: ticketImg2, alt: 'Lottery Ticket 2' },
     { src: ticketImg3, alt: 'Lottery Ticket 3' },
     { src: ticketImg4, alt: 'Lottery Ticket 4' },
+
   ];
   const [currentTicketIndex, setCurrentTicketIndex] = useState(0);
   const nextTicketImage = () => {
@@ -159,7 +161,7 @@ function Home() {
         </div>
         {/* Text Right */}
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center bg-black">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white">{heroTitle}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">{heroTitle}</h1>
           <p className="text-white text-lg md:text-xl mb-1">{heroSubtitle}</p>
           <p className="text-white text-md md:text-base mb-1">{storeAddress}</p>
           <p className="text-white text-md md:text-base mb-3">Call us at <a href="tel:+17324996748" className="underline hover:text-yellow-300 transition-colors">+1 732-499-6748</a></p>
@@ -265,7 +267,7 @@ function Home() {
               {/* Deal 1 */}
               <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4">
                 <img src={platterImg} alt="Coffee Deal" className="w-20 h-20 rounded-lg object-cover" />
-                <div className="text-base md:text-lg font-medium text-gray-800"><span className="font-bold">Any Size Coffee</span>, Butter Roll &amp; Banana for <span className="text-red-600 font-bold">$5</span></div>
+                <div className="text-base md:text-lg font-medium text-gray-800"><span className="font-bold">Any Size Coffee</span>, Cake or Muffin or Croissant &amp; 1 Banana for <span className="text-red-600 font-bold">$5</span></div>
               </div>
               {/* Deal 2 */}
               <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4">
