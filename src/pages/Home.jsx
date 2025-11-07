@@ -170,7 +170,7 @@ function Home() {
             href="https://maps.app.goo.gl/ajsP7umBxQCVA71fA" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block px-6 py-2 bg-white text-black rounded-lg hover:bg-gray-100 transition-colors duration-300 w-fit"
+            className="inline-block px-6 py-2 bg-white text-black rounded-lg hover:bg-gray-100 transition-colors duration-300 transform hover:-translate-y-1 hover:shadow-xl active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 w-fit"
           >
             📍 {findUs}
           </a>
@@ -184,7 +184,11 @@ function Home() {
       <div className="grid grid-cols-1 md:grid-cols-6 gap-4 py-10 px-4 md:px-0 max-w-6xl mx-auto">
         {features.map((feature, idx) =>
           idx === 0 ? (
-            <Link to="/money-transfer" key={idx} className="flex flex-row md:flex-col items-center bg-yellow-300 text-left md:text-center rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+            <Link
+              to="/money-transfer"
+              key={idx}
+              className="flex flex-row md:flex-col items-center bg-yellow-300 text-left md:text-center rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black/30"
+            >
               <img src={wuLogo} alt="Western Union Logo" className="w-12 h-12 object-contain mb-0 md:mb-2 mr-4 md:mr-0 rounded" />
               <div>
                 <h3 className="font-bold text-lg mb-1">{feature.title}</h3>
@@ -192,7 +196,11 @@ function Home() {
               </div>
             </Link>
           ) : idx === 1 ? (
-            <Link to="/bills" key={idx} className="flex flex-row md:flex-col items-center text-left md:text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+            <Link
+              to="/bills"
+              key={idx}
+              className="flex flex-row md:flex-col items-center text-left md:text-center bg-white rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black/30"
+            >
               <img src={pay} alt="Money Order Icon" className="w-12 h-12 object-contain mb-0 md:mb-2 mr-4 md:mr-0 rounded" />
               <div>
                 <h3 className="font-bold text-lg mb-1">{feature.title}</h3>
@@ -203,7 +211,7 @@ function Home() {
             <Link
               to="/casino-bus-services"
               key={idx}
-              className="flex flex-row md:flex-col items-center text-left md:text-center bg-blue-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+              className="flex flex-row md:flex-col items-center text-left md:text-center bg-blue-700 rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white/70"
             >
               <img src={busIcon} alt="Bus Icon" className="w-12 h-12 object-contain mb-0 md:mb-2 mr-4 md:mr-0 rounded" />
               <div>
@@ -212,7 +220,11 @@ function Home() {
               </div>
             </Link>
           ) : idx === 3 ? (
-            <Link to="/new-jersey-lottery" key={idx} className="flex flex-row md:flex-col items-center text-left md:text-center bg-green-600 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+            <Link
+              to="/new-jersey-lottery"
+              key={idx}
+              className="flex flex-row md:flex-col items-center text-left md:text-center bg-green-600 rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white/70"
+            >
               <img src={newJerseyLottery} alt="Lottery Icon" className="w-12 h-12 object-contain mb-0 md:mb-2 mr-4 md:mr-0 rounded" />
               <div>
                 <h3 className="font-bold text-white text-lg mb-1">{feature.title}</h3>
@@ -220,7 +232,11 @@ function Home() {
               </div>
             </Link>
           ) : idx === 4 ? (
-            <Link to="/services" key={idx} className="flex flex-row md:flex-col items-center text-left md:text-center bg-blue-100 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Link
+              to="/services"
+              key={idx}
+              className="flex flex-row md:flex-col items-center text-left md:text-center bg-blue-100 rounded-xl p-6 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black/30"
+            >
               <img src={printerIcon} alt="Printer Icon" className="w-12 h-12 object-contain mb-0 md:mb-2 mr-4 md:mr-0 rounded" />
               <div>
                 <h3 className="font-bold  text-lg mb-1">{feature.title}</h3>
@@ -231,7 +247,7 @@ function Home() {
             <Link
               to="/giftCard"
               key={idx}
-              className="flex flex-row md:flex-col items-center text-left md:text-center bg-gradient-to-r from-[#b993d6] via-[#8ca6db] to-[#b993d6] rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+              className="flex flex-row md:flex-col items-center text-left md:text-center bg-gradient-to-r from-[#b993d6] via-[#8ca6db] to-[#b993d6] rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white/70"
             >
               <img
                 src={giftCardIcon}
@@ -319,7 +335,7 @@ function Home() {
             {/* Navigation Buttons */}
             <button
               onClick={prevTicketImage}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors touch-manipulation"
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/60 touch-manipulation"
               aria-label="Previous ticket image"
             >
               <svg className="w-6 h-6 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -328,7 +344,7 @@ function Home() {
             </button>
             <button
               onClick={nextTicketImage}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors touch-manipulation"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/60 touch-manipulation"
               aria-label="Next ticket image"
             >
               <svg className="w-6 h-6 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -341,7 +357,7 @@ function Home() {
                 <button
                   key={index}
                   onClick={() => setCurrentTicketIndex(index)}
-                  className={`w-3 h-3 md:w-2 md:h-2 rounded-full transition-colors touch-manipulation ${
+                  className={`w-3 h-3 md:w-2 md:h-2 rounded-full transition-all duration-300 transform hover:scale-125 touch-manipulation ${
                     index === currentTicketIndex ? 'bg-white' : 'bg-white/50'
                   }`}
                   aria-label={`Go to ticket image ${index + 1}`}
@@ -387,7 +403,7 @@ function Home() {
           {/* Navigation Buttons */}
           <button 
             onClick={prevImage}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors touch-manipulation"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/60 touch-manipulation"
             aria-label="Previous image"
           >
             <svg className="w-6 h-6 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -396,7 +412,7 @@ function Home() {
           </button>
           <button 
             onClick={nextImage}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors touch-manipulation"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/60 touch-manipulation"
             aria-label="Next image"
           >
             <svg className="w-6 h-6 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -409,7 +425,7 @@ function Home() {
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`w-3 h-3 md:w-2 md:h-2 rounded-full transition-colors touch-manipulation ${
+                className={`w-3 h-3 md:w-2 md:h-2 rounded-full transition-all duration-300 transform hover:scale-125 touch-manipulation ${
                   index === currentImageIndex ? 'bg-white' : 'bg-white/50'
                 }`}
                 aria-label={`Go to image ${index + 1}`}
@@ -430,7 +446,7 @@ function Home() {
           {/* Navigation Buttons */}
           <button
             onClick={prevGroceryImage}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors touch-manipulation"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/60 touch-manipulation"
             aria-label="Previous grocery image"
           >
             <svg className="w-6 h-6 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -439,7 +455,7 @@ function Home() {
           </button>
           <button
             onClick={nextGroceryImage}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors touch-manipulation"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-3 md:p-2 rounded-full hover:bg-black/80 transition-colors duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/60 touch-manipulation"
             aria-label="Next grocery image"
           >
             <svg className="w-6 h-6 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -452,7 +468,7 @@ function Home() {
               <button
                 key={index}
                 onClick={() => setCurrentGroceryIndex(index)}
-                className={`w-3 h-3 md:w-2 md:h-2 rounded-full transition-colors touch-manipulation ${
+                className={`w-3 h-3 md:w-2 md:h-2 rounded-full transition-all duration-300 transform hover:scale-125 touch-manipulation ${
                   index === currentGroceryIndex ? 'bg-white' : 'bg-white/50'
                 }`}
                 aria-label={`Go to grocery image ${index + 1}`}
