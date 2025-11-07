@@ -5,10 +5,10 @@ import lotteryImg from '../assets/lottery.jpeg';
 
 // Import ticket images
 import ticketImg1 from '../assets/tickets/2FC6A284-A5EE-46BF-8753-077F6AFD56DE_1_105_c.jpeg';
-import ticketImg2 from '../assets/tickets/5388628D-1B84-4E8A-8A7F-6C719AB60E5A_1_105_c.jpeg';
-import ticketImg3 from '../assets/tickets/D659E4D3-C04A-41D7-B4E4-72612C684E08_1_105_c.jpeg';
-import ticketImg4 from '../assets/tickets/AF2C5BD6-7C17-4253-B7AA-C3645730D264_1_105_c.jpeg';
-import ticketImg5 from '../assets/tickets/bigwinner.jpeg';
+import ticketImg2 from '../assets/tickets/bigwinner.jpeg';
+import ticketImg3 from '../assets/tickets/D7FEA338-D610-40B2-B116-33B59B71D36E_1_105_c-min.jpeg';
+import ticketImg4 from '../assets/tickets/739599D4-834F-4C1F-9D87-E11B657FFBCA_1_105_c-min.jpeg';
+import ticketImg5 from '../assets/tickets/FB44EFAC-D925-4774-815B-FAD119234A6D_1_105_c-min.jpeg';
 import busIcon from '../assets/bus.png';
 import lotteryIcon from '../assets/new_jersey_lottery.png';
 import printerIcon from '../assets/printer.png';
@@ -129,10 +129,10 @@ function Home() {
   // Ticket carousel state and images
   const ticketImages = [
     { src: ticketImg5, alt: 'Lottery Ticket 5' },
-    { src: ticketImg1, alt: 'Lottery Ticket 1' },
-    { src: ticketImg2, alt: 'Lottery Ticket 2' },
-    { src: ticketImg3, alt: 'Lottery Ticket 3' },
-    { src: ticketImg4, alt: 'Lottery Ticket 4' },
+    { src: ticketImg2, alt: 'Lottery Ticket 1' },
+    { src: ticketImg3, alt: 'Lottery Ticket 2' },
+    { src: ticketImg4, alt: 'Lottery Ticket 3' },
+    { src: ticketImg1, alt: 'Lottery Ticket 4' },
 
   ];
   const [currentTicketIndex, setCurrentTicketIndex] = useState(0);
