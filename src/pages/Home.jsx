@@ -36,7 +36,7 @@ import fruit28Img from '../assets/deals/fruit28.webp';
 
 // English-only content as plain variables/arrays
 const heroTitle = 'Your Dedicated Neighborhood Store, serving community for over 30 Years with reliability and honesty.';
-const heroSubtitle = 'Open every day from 6 AM to 11 PM';
+const heroSubtitle = 'Open 6 AM to 11:30 PM (Fri & Sat till 12 AM) everyday.';
 const findUs = 'Find Us on Google Maps';
 const storeAddress = '960 St Georges Ave, Rahway, NJ';
 const features = [
@@ -283,7 +283,7 @@ function Home() {
               {/* Deal 1 */}
               <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4">
                 <img src={platterImg} alt="Coffee Deal" className="w-20 h-20 rounded-lg object-cover" />
-                <div className="text-base md:text-lg font-medium text-gray-800"><span className="font-bold">Any Size Coffee</span>, Cake or Muffin or Croissant &amp; 1 Banana for <span className="text-red-600 font-bold">$5</span></div>
+                <div className="text-base md:text-lg font-medium text-gray-800"><span className="font-bold">Any Size Coffee</span>, Cappuccino &amp; Tea for <span className="text-red-600 font-bold">$2</span></div>
               </div>
               {/* Deal 2 */}
               <div className="flex items-center bg-gray-50 rounded-xl shadow p-4 gap-4">
