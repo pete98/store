@@ -36,7 +36,7 @@ import cokeImg from '../assets/deals/coke.avif';
 
 // English-only content as plain variables/arrays
 const heroTitle = 'Your Dedicated Neighborhood Store, serving community for over 30 Years with reliability and honesty.';
-const heroSubtitle = 'Open 6 AM to 11:30 PM (Fri & Sat till 12 AM) everyday.';
+const heroSubtitle = 'Open 6 AM to 11 PM everyday.';
 const findUs = 'Find Us on Google Maps';
 const storeAddress = '960 St Georges Ave, Rahway, NJ';
 const features = [
