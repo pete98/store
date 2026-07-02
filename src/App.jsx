@@ -9,6 +9,7 @@ import MoneyTransfer from './pages/MoneyTransfer';
 import CasinoBusServices from './pages/CasinoBusServices';
 import NewJerseyLottery from './pages/NewJerseyLottery';
 import Navbar from './components/Navbar.jsx'
+import PromoPopup from './components/PromoPopup.jsx';
 import Bills from './pages/bills.jsx';
 import GiftCard from './pages/giftCard.jsx';
 import './index.css';
@@ -16,6 +17,7 @@ import './index.css';
 function App() {
   return (
     <BrowserRouter>
+      <PromoPopup />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
